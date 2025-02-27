@@ -1,0 +1,14 @@
+
+1) Qwen2-VL-7B-Instruct-bnb-4bit 
+	RuntimeError("Unsloth: Failed to make input require gradients!") 
+	RuntimeError: only Tensors of floating point dtype can require gradients
+	
+	But it is fine on the "Llama-3.2-11B-Vision-Instruct"
+	
+	I tried: 
+	- Convert L to RGB in df (maybe create images again? Or not) 
+	- Deleted one row with None file 
+	- pip install --upgrade --force-reinstall --no-deps --no-cache-dir unsloth unsloth_zoo
+	  https://github.com/unslothai/unsloth/issues/1485 
+	  
+	  
